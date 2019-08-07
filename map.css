@@ -1,0 +1,71 @@
+/* -------- Карта и описание - размещаем по горизонтали ------- */
+#mymap {
+	float: left;	
+}
+
+#opisanie {
+	float: left;
+	padding: 20px;
+	width: 500px;
+}
+
+/* -------- Скрытые блоки -------- */
+
+.skryty {
+	display: none;
+}
+
+
+/* -------- SVG -------- */
+
+
+/* --- g - группа, включающая path, circle и text --- */
+g {
+	cursor: pointer;   	/* Форма курсора при наведении - "палец" */
+}
+
+g>path {				/* Параметры контура path */	
+	fill: #cceaf7;
+	stroke: #24838e;
+	stroke-width: 0.3;
+	stroke-linejoin: round;
+	transition: all 0.4s ease-in-out;
+}
+
+g>circle {				/* Параметры окружности circle */
+	stroke: #24838e;
+	stroke-width: 0.3;
+	transition: all 0.4s ease-in-out;
+}
+
+g>text {
+	font-family: Arial, Helvetica, sans-serif;
+	transition: all 0.4s ease-in-out;
+}
+
+
+/* --- Поведение при наведении курсора на группу g --- */
+g:hover>path {	
+	fill: #7bbed9;
+	filter: drop-shadow(4px 4px 2px rgba(0,0,0,0.5));
+	transition: all 0.3s ease;
+}
+
+g:hover>circle {
+	fill: red;
+	filter: drop-shadow(4px 4px 2px rgba(0,0,0,0.5));
+	transition: all 0.3s ease;
+}
+
+g:hover>text {			
+	text-shadow: 1px 1px 4px #fffff0;	
+	fill: #c00;	
+	transition: all 0.3s ease;
+}
+
+/* --- Подсветка выбранного региона --- */
+.selected>path {	
+	fill: #7bbed9;
+	filter: drop-shadow(4px 4px 2px rgba(0,0,0,0.5));
+	transition: all 0.3s ease;
+}
